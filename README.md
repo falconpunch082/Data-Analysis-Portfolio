@@ -27,3 +27,8 @@ Week 6 - Introduction to APIs
 - Learned how to use the hvplot, geoview and cartopy libraries to make data visualisations utilising maps.
 
 Week 7 to 8 - Data Analysis Project
+
+Week 9 - Introduction to SQL
+- Learned about databases, tables, views, entity relationship diagrams, primary and foreign key, etc
+- Utilised PostgreSQL to learn about concepts of SQL
+- Learned various keywords used in SQL and wildcards
