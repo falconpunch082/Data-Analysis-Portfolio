@@ -27,7 +27,17 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     print("Server received request for 'Home' page...")
-    return "Welcome to my 'Home' page!"
+    return (
+        f"Welcome to the Hawaii Temperature and Precipitation API! <br/>"
+        f"Available routes: <br/>"
+        f"- Static routes <br/>"
+        f"/api/v1.0/precipitation -> provides all precipitation data from database <br/>"
+        f"/api/v1.0/stations -> provides list of weather stations in Hawaii <br/>"
+        f"/api/v1.0/tobs -> provides date and temperature observations from most active station from previous year <br/>"
+        f"- Variable routes (dates should be in YYYY-MM-DD format) <br/>"
+        f"/api/v1.0/(start_date) -> once a start date is determined, provides minimum, average and maximum temperature from that date to latest date <br/>"
+        f"/api/v1.0/(start_date)/(end_date) -> once a start and end date are determined, provides minimum, average and maximum temperature from start to end date <br/>"
+    )
 
 # Creating preciptiation page
 @app.route("/api/v1.0/precipitation")

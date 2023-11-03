@@ -32,3 +32,8 @@ Week 9 - Introduction to SQL
 - Learned about databases, tables, views, entity relationship diagrams, primary and foreign key, etc
 - Utilised PostgreSQL to learn about concepts of SQL
 - Learned various keywords used in SQL and wildcards
+
+Week 10 - Advanced SQL Techniques
+- Introduced to SQLAlchemy and how it integrates to Pandas in the context of EDA and data visualisation
+- Introduced to SQLite as another form of database
+- Introduced to Flask, created local server to hold database and API
