@@ -37,3 +37,8 @@ Week 10 - Advanced SQL Techniques
 - Introduced to SQLAlchemy and how it integrates to Pandas in the context of EDA and data visualisation
 - Introduced to SQLite as another form of database
 - Introduced to Flask, created local server to hold database and API
+
+Week 11 - Web Scraping
+- Introduced to Beautiful Soup, Selenium and Splinter libaries to gather data from websites automatically
+- Introduced to the fundamentals of HTML and CSS for web scraping purposes
+- Understood how to convert collected data to DataFrames for data analysis with Pandas and Matplotlib
