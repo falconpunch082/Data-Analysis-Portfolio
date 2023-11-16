@@ -42,3 +42,9 @@ Week 11 - Web Scraping
 - Introduced to Beautiful Soup, Selenium and Splinter libaries to gather data from websites automatically
 - Introduced to the fundamentals of HTML and CSS for web scraping purposes
 - Understood how to convert collected data to DataFrames for data analysis with Pandas and Matplotlib
+
+Week 12 - NoSQL Databases (MongoDB)
+- Introduced to the concept and use of NoSQL databases with MongoDB
+- Learned how to do the CRUD process with MongoDB
+- Learned about the aggregation pipeline in MongoDB
+- Used PyMongo and utilised Pandas skills to conduct data visualisation 
