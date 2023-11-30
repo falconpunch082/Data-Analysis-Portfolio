@@ -48,3 +48,14 @@ Week 12 - NoSQL Databases (MongoDB)
 - Learned how to do the CRUD process with MongoDB
 - Learned about the aggregation pipeline in MongoDB
 - Used PyMongo and utilised Pandas skills to conduct data visualisation 
+
+Week 13 - ETL Project (link: https://github.com/falconpunch082/Crowdfunding_ETL)
+- Introduced to the concept of Extracting, Transforming and Loading and its essential role in data analytics.
+- Used Pandas to convert data from various file types into DataFrames to load into a database.
+- Learned about regular expressions (regex).
+
+---
+
+Completion of bootcamp is equivalent to the following Monash University units:
+- ETO5922 - Data visualisation and analytics / ETF5922 - Data visualisation and analytics
+- ITO4133 - Introduction to Python
