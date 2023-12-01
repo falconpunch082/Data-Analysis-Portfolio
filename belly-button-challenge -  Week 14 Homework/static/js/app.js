@@ -10,30 +10,19 @@ d.then(function(d){
 
     console.log("Populated dropdown list");
 
-    // Create a dictionary that associates each individual with their place in the array
-    individ_place = {}
-    for (let i = 0; i < d["names"].length; i++) {
-        let key = d["names"][i];
-        individ_place[key] = i;
+    // Transforming json file so that each subarray contains info of each
+    // individual
+    let td = [];
+
+    for (let i = 0; i < d.names.length; i++) {
+        td.push({
+            name: d.names[i],
+            metadata: d.metadata[i],
+            otu_ids: d.samples[i].otu_ids,
+            sample_values: d.samples[i].sample_values,
+            otu_labels: d.samples[i].otu_labels
+        });
     }
 
-    console.log("Created dictionary");
-
-    // Create initialisation function to populate website with individual 940's data
-    function init() {
-        let table_data = {
-            x: d["samples"][0]["sample_values"],
-            y: d["samples"][0]["otu_ids"].toString(),
-            type: 'bar',
-            orientation: 'h'
-        }
-
-        Plotly.newPlot("bar", [table_data]);
-
-    }
-
-
-
-    // Initialise
-    init();
-})
+    console.log(td);
+});
