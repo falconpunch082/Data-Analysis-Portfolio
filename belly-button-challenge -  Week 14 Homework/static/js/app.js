@@ -79,7 +79,8 @@ d.then(function(d){
                 type: 'sort',
                 target: 'y',
                 order: 'descending'
-            }]
+            }],
+            text: top10labels
         }
 
         let layout = {
@@ -94,12 +95,44 @@ d.then(function(d){
 
         Plotly.newPlot("bar", [chartData], layout);
     }
+    
+    // This is a function that will make a bubble chart displaying all the
+    // OTUs in an individual.
+    function bubble(id){
+        // Load data of requested individual's number
+        let data = td.filter(td => td.name === id);
+        let samples = data[0]["samples"];
+        
+        let chartData = {
+            x: samples["otu_ids"],
+            y: samples["sample_values"],
+            text: samples["otu_labels"],
+            mode: 'markers',
+            marker: {
+                color: samples["sample_values"],
+                size: samples["sample_values"],
+                colorscale: 'Portland'
+            },
+        }
+
+        let layout = {
+            title: `OTUs present in individual ${samples["id"]}`,
+            xaxis: {title: 'OTU'},
+            yaxis: {title: 'Count'}
+        }
+
+        Plotly.newPlot("bubble", [chartData], layout);
+
+        }
 
     // This is a function to initialise the website with data from
     // individual 940 so charts can be populated.
     function init(){
         bar("940");
+        bubble("940");
     }
 
+    // Initialising
     init();
+
 });
