@@ -49,10 +49,16 @@ Week 12 - NoSQL Databases (MongoDB)
 - Learned about the aggregation pipeline in MongoDB
 - Used PyMongo and utilised Pandas skills to conduct data visualisation 
 
-Week 13 - ETL Project (link: https://github.com/falconpunch082/Crowdfunding_ETL)
+Week 13 - ETL Project ([link](https://github.com/falconpunch082/Crowdfunding_ETL))
 - Introduced to the concept of Extracting, Transforming and Loading and its essential role in data analytics.
 - Used Pandas to convert data from various file types into DataFrames to load into a database.
 - Learned about regular expressions (regex).
+
+Week 14 - Interactive Visualisations ([example](https://falconpunch082.github.io/))
+- Introduced to Javascript and its fundamentals (including ES6 methods like arrow functions)
+- Introduced to Plotly and D3.js; learned how to make various charts
+- Learned how to map, filter and slice Javascript arrays to manipulate datasets
+- Learned about asynchronous loading, DOM and event listening.
 
 ---
 
