@@ -51,7 +51,7 @@ d.then(function(d){
         s.otu_ids = zippedSamples.map(item => item["id"].toString());
         s.sample_values = zippedSamples.map(item => item.value);
         s.otu_labels = zippedSamples.map(item => item.label);
-
+        // Reassigning values of samples in td with values of s
         td[i].samples = s;
     }
 
@@ -124,15 +124,53 @@ d.then(function(d){
         Plotly.newPlot("bubble", [chartData], layout);
 
         }
+    
+    // This is a function to fill in the demographics panel with data
+    // from the chosen individual.
+    function demographic(id){
+        // Clear any existing data
+        d3.selectAll("p").remove();
 
+        // Load data of requested individual's number
+        let data = td.filter(td => td.name === id);
+        let demo = data[0]["metadata"];
+
+        d3.select("#sample-metadata").append("p").text('id: ' + demo["id"].toString());
+        d3.select("#sample-metadata").append("p").text('ethnicity: ' + demo["ethnicity"]);
+        d3.select("#sample-metadata").append("p").text('gender: ' + demo["gender"]);
+        d3.select("#sample-metadata").append("p").text('age: ' + demo["age"].toString());
+        d3.select("#sample-metadata").append("p").text('location: ' + demo["location"]);
+        d3.select("#sample-metadata").append("p").text('bbtype: ' + demo["bbtype"]);
+        d3.select("#sample-metadata").append("p").text('wfreq: ' + demo["wfreq"].toString());
+    }
+    
     // This is a function to initialise the website with data from
     // individual 940 so charts can be populated.
     function init(){
         bar("940");
         bubble("940");
+        demographic("940");
+
+        console.log('Successfully loaded 940\'s data.')
     }
 
-    // Initialising
-    init();
+    // This is a function to fill in data with chosen individual once a selection
+    // from the dropdown list has been made
+    function optionChanged(event) {
+        // Identifying dropdown menu
+        let dropdownMenu = d3.select("#selDataset");
+        // determining value chosen
+        let sel = dropdownMenu.property("value");
+      
+        // Updating charts with selected individual 
+        bar(sel);
+        bubble(sel);
+        demographic(sel);
 
+        console.log(`Successfully loaded ${sel}\'s data.`)
+    }
+
+    // Initialising and listening
+    init();
+    d3.select("#selDataset").on("change", optionChanged);
 });
