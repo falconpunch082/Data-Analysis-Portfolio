@@ -1,4 +1,5 @@
-// Reading json file provided
+// Reading json file provided - this part of code is different from the live version
+// as this relies on a localhost server to run.
 let d = d3.json('http://localhost:5500/samples.json');
 
 // Using then wrapper to ensure json is loaded before starting any other function
@@ -135,7 +136,7 @@ d.then(function(d){
         let chartData = {
             gauge: { axis: { visible: true, range: [0, 9] } },
             value: wfreq,
-            title: {text: "Belly Button Washing Frequency (Scrubs per Week)"},
+            title: {text: "Washing Frequency (scrubs/week)"},
             type: 'indicator',
             mode: 'gauge+number'
         }
