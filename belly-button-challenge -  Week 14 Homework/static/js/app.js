@@ -98,7 +98,7 @@ d.then(function(d){
     
     // This is a function that will make a bubble chart displaying all the
     // OTUs in an individual.
-    function bubble(id){
+    function bubble(id) {
         // Load data of requested individual's number
         let data = td.filter(td => td.name === id);
         let samples = data[0]["samples"];
@@ -123,7 +123,25 @@ d.then(function(d){
 
         Plotly.newPlot("bubble", [chartData], layout);
 
+    }
+
+    // This is a function that will make a gauge displaying how many times
+    // the chosen individual washes their belly button
+    function gauge(id) {
+        // Load data of requested individual's number
+        let data = td.filter(td => td.name === id);
+        let wfreq = data[0]["metadata"]["wfreq"];
+
+        let chartData = {
+            gauge: { axis: { visible: true, range: [0, 9] } },
+            value: wfreq,
+            title: {text: "Belly Button Washing Frequency (Scrubs per Week)"},
+            type: 'indicator',
+            mode: 'gauge+number'
         }
+
+        Plotly.newPlot("gauge", [chartData]);
+    }
     
     // This is a function to fill in the demographics panel with data
     // from the chosen individual.
@@ -149,6 +167,7 @@ d.then(function(d){
     function init(){
         bar("940");
         bubble("940");
+        gauge("940")
         demographic("940");
 
         console.log('Successfully loaded 940\'s data.')
@@ -165,6 +184,7 @@ d.then(function(d){
         // Updating charts with selected individual 
         bar(sel);
         bubble(sel);
+        gauge(sel);
         demographic(sel);
 
         console.log(`Successfully loaded ${sel}\'s data.`)
