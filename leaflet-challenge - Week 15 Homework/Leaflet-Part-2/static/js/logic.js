@@ -134,7 +134,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
         
         // Creating layer groups for quakes and fault lines
         let quakes = L.layerGroup(quake_circles);
-        let lines = L.layerGroup(fault_lines);
+        let lines = L.geoJSON(fault_lines);
 
         // Assigning overlayMaps
         let overlayMaps = {
@@ -147,7 +147,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
             center: [12.844810516662491, 114.26277687079369],
             zoom: 4,
             minZoom: 3,
-            layers: [street, quakes]
+            layers: [street, quakes, lines]
         });
 
         // Adding legend and description
