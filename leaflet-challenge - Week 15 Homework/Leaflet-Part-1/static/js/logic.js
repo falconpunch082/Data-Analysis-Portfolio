@@ -21,7 +21,7 @@ function addDesc(datetime) {
         div.innerHTML += 
             `
             <h2>Earthquakes over past 7 days</h2>
-            <p>Size indicates magnitude</p>
+            <p>Size of circle indicates magnitude. Click circle to show details.</p>
             <p>Data obtained from <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">earthquake.usgs.gov</a>.</p>
             <p>Last updated: ${datetime}</p>
             `
