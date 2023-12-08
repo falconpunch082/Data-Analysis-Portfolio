@@ -66,7 +66,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
         let depth = earthquakes[i].geometry.coordinates[2];
         let mag = earthquakes[i].properties.mag;
         let loc = earthquakes[i].properties.place;
-        let datetime = Date(earthquakes[i].properties.time);
+        let datetime = new Date(earthquakes[i].properties.time);
 
         // Determining colour of marker through depth
         function colour(d) {
@@ -120,5 +120,4 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     addLegend();
     let gen = Date(quakeData["metadata"]["generated"]);
     addDesc(gen);
-    
 });
