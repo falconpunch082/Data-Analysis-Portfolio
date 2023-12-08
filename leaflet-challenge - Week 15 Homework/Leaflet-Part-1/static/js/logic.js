@@ -61,7 +61,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     let earthquakes = quakeData["features"];
     // Creating circle markers for each earthquake
     for(i = 0; i < earthquakes.length; i++){
-        // Determining coordinates
+        // Determining datapoints
         let coords = [earthquakes[i].geometry.coordinates[1], earthquakes[i].geometry.coordinates[0]];
         let depth = earthquakes[i].geometry.coordinates[2];
         let mag = earthquakes[i].properties.mag;
@@ -116,6 +116,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
     }
     
+    // Adding legend and description
     addLegend();
     let gen = Date(quakeData["metadata"]["generated"]);
     addDesc(gen);
