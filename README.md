@@ -60,6 +60,10 @@ Week 14 - Interactive Visualisations ([example](https://falconpunch082.github.io
 - Learned how to map, filter and slice Javascript arrays to manipulate datasets
 - Learned about asynchronous loading, DOM and event listening.
 
+Week 15 - Interactive Maps ([example](https://falconpunch082.github.io/earthquake-visualiser/))
+- Introduced to Leaflet.js and commonly used plugins (heatmap, markercluster, choropleth).
+- Learned about GeoJSON and how to use it in data visualisations.
+
 ---
 
 Completion of bootcamp is equivalent to the following Monash University units:
