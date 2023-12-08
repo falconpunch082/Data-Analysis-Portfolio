@@ -1,5 +1,5 @@
 // Creating map
-let map = L.map("map", {
+let quake_map = L.map("map", {
     center: [12.844810516662491, 114.26277687079369],
     zoom: 4,
     minZoom: 3
@@ -8,7 +8,29 @@ let map = L.map("map", {
 // Setting tile layer
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+}).addTo(quake_map);
+
+// Setting function to create description
+function addDesc(datetime) {
+    let desc = L.control({
+        position: 'bottomleft'
+    });
+    
+    desc.onAdd = function() {
+        let div = L.DomUtil.create('div', 'desc');
+        div.innerHTML += 
+            `
+            <h2>Earthquakes over past 7 days</h2>
+            <p>Size indicates magnitude</p>
+            <p>Data obtained from <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">earthquake.usgs.gov</a>.</p>
+            <p>Last updated: ${datetime}</p>
+            `
+        
+        return div;
+    }
+
+    desc.addTo(quake_map);
+}
 
 // Setting function to make legend
 function addLegend() {
@@ -20,15 +42,19 @@ function addLegend() {
         let div = L.DomUtil.create('div', 'legend');
         let labels = ['<10', '11-30', '31-50', '51-70', '71-90', '>90'];
         let colours = ['#ffccd5', '#ffb3c1', '#ff758f', '#c9184a', '#800f2f', '#590d22'];
-        for (i = 0; i < labels.length; i++) {
+
+        div.innerHTML += "<p>Depth of epicentre (km)</p>";
+        
+        for (let i = 0; i < labels.length; i++) {
             div.innerHTML +=
-                    '<i style="background:' + colours[i] + '"></i> ' + labels[i] + '<br>';
+                    '<i style=\"background-color: ' + colours[i] + ';\">&nbsp;</i> ' + labels[i] + '<br>';
         }
         return div;
         }
     
-    legend.addTo(map);
+    legend.addTo(quake_map);
 }
+
 
 // Performing API call to check all earthquakes from past 7 days
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(quakeData){
@@ -69,7 +95,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
                 result = 0;
             }
 
-            console.log(result);
             return result;
         }
 
@@ -87,9 +112,12 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
             fillColor: colour(depth),
             color: "white",
             radius: radius(mag)
-        }).bindPopup(popup(loc)).addTo(map);
+        }).bindPopup(popup(loc)).addTo(quake_map);
 
-        // addLegend();
     }
+    
+    addLegend();
+    let gen = Date(quakeData["metadata"]["generated"]);
+    addDesc(gen);
     
 });
