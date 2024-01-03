@@ -64,6 +64,10 @@ Week 15 - Interactive Maps ([example](https://falconpunch082.github.io/earthquak
 - Introduced to Leaflet.js and commonly used plugins (heatmap, markercluster, choropleth).
 - Learned about GeoJSON and how to use it in data visualisations.
 
+Week 16 + 17 - Data Visualisation Project ([link](https://github.com/falconpunch082/la-crime-visualiser))
+- Combined everything learned into a project.
+- Learned more about front-end development and how to use libraries through self-learning.
+
 ---
 
 Completion of bootcamp is equivalent to the following Monash University units:
