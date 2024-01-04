@@ -8,7 +8,7 @@ Contents of repo:
 - stations.ipynb: Jupyter Notebook showing how the CitiBike stations API call is converted into stations.csv
 - README.md - the file you are reading now :p
 
-All analysis is done in the Tableau story linked [here](https://public.tableau.com/app/profile/nicholas.dale/viz/CitiBike-Dec22-to-Nov23/StatStory?publish=yes).
+All analysis is done in the Tableau story linked [here](https://public.tableau.com/app/profile/nicholas.dale/viz/CitiBike-Dec2022-to-Nov2023/StatStory).
 
 There are two dashboards available with a filter based on months provided:
 - Ridership Statistics ([link](https://public.tableau.com/app/profile/nicholas.dale/viz/CitiBike-RidershipStats/RidershipStats?publish=yes))
