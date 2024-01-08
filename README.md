@@ -26,7 +26,8 @@ Week 6 - Introduction to APIs
 - Learned how to integrate data gained from APIs into the data collection process.
 - Learned how to use the hvplot, geoview and cartopy libraries to make data visualisations utilising maps.
 
-Week 7 to 8 - Data Analysis Project
+Week 7 to 8 - Data Analysis Project ([link](https://github.com/falconpunch082/da_bc-proj1))
+- Combined skills learned throughout Weeks 1 to 6 to create a report using raw data.
 
 Week 9 - Introduction to SQL
 - Learned about databases, tables, views, entity relationship diagrams, primary and foreign key, etc
