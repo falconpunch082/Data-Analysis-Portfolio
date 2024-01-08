@@ -68,7 +68,7 @@ Week 16 + 17 - Data Visualisation Project ([link](https://github.com/falconpunch
 - Combined everything learned into a project.
 - Learned more about front-end development and how to use libraries through self-learning.
 
-Week 18 - Introduction to Tableau ([link]()https://public.tableau.com/app/profile/nicholas.dale/viz/CitiBike-Dec2022-to-Nov2023/StatStory))
+Week 18 - Introduction to Tableau ([link](https://public.tableau.com/app/profile/nicholas.dale/viz/CitiBike-Dec2022-to-Nov2023/StatStory))
 - Introduced to Tableau business intelligence application and learned how to make tables and graphs using Tableau.
 - Learned to make dashboards and stories with analyses using tables and graphs.
 - Learned the importance of data modification before using Tableau.
