@@ -74,6 +74,11 @@ Week 18 - Introduction to Tableau ([link](https://public.tableau.com/app/profile
 - Learned to make dashboards and stories with analyses using tables and graphs.
 - Learned the importance of data modification before using Tableau.
 
+Week 19 - Unsupervised Learning
+- Introduced to the concept of machine learning, and learned the difference between supervised, unsupervised and reinforcement learning.
+- Understood that unsupervised learning can be used for dimensionality reduction and clustering purposes.
+- Learned about k-means clustering and principal component analysis and how to utilise them with SciKit Learn modules.
+
 ---
 
 Completion of bootcamp is equivalent to the following Monash University units:
