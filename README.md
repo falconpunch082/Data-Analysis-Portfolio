@@ -78,6 +78,14 @@ Week 19 - Unsupervised Learning
 - Introduced to the concept of machine learning, and learned the difference between supervised, unsupervised and reinforcement learning.
 - Understood that unsupervised learning can be used for dimensionality reduction and clustering purposes.
 - Learned about k-means clustering and principal component analysis and how to utilise them with SciKit Learn modules.
+- Learned about the importance of preprocessing data (StandardScaler)
+
+Week 20 - Supervised Learning
+- Understood that supervised learning can be used for classification and regression purposes.
+- Learned about the various different types of supervised learning models, such as linear and logistic regression, support vector machines, decision tress, random forests and KNearestNeighbours.
+- Learned about ensemble learning approach to create a reliable machine learning model based on weak learners.
+- Learned about the importance of splitting provided data into training and validation data.
+- Learned about metrics used to measure accuracy of a model (accuracy, precision, recall, confusion matrix).
 
 ---
 
