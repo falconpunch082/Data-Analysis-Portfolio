@@ -37,13 +37,7 @@ In all iterations, the first layer had the argument input_dim=36 as there were 3
 
 The first iteration of the model had the following structure:
 
- Layer (activation)         Output Shape              Param #   
-=================================================================
- dense_3 (relu)             (None, 10)                370       
-                                                                 
- dense_4 (relu)             (None, 5)                 55        
-                                                                 
- dense_5 (sigmoid)          (None, 1)                 6         
+![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/4b891145-dc29-4d05-a86f-82de1164c8dd)
 
 The following was the final result of training of the first iteration.
 
@@ -58,25 +52,9 @@ As this did not satisfy the desired accuracy of 75% or above, multiple iteration
 - More layers and neurons were added to see if it could improve accuracy. Epochs were increased from 100 to 150 in another iteration.
 - Throughout the attempts, the 'relu' function (for hidden layers) and 'sigmoid' function (for the output layer) were the best in accuracy.
 
-The ninth iteration of the model was the final iteration. It had the following structure.
+The ninth iteration of the model was the final iteration. It had the following structure:
 
- Layer (activation)          Output Shape              Param #   
-=================================================================
- dense_40 (relu)             (None, 200)               7400      
-                                                                 
- dense_41 (relu)             (None, 150)               30150     
-                                                                 
- dropout_16 (Dropout)        (None, 150)               0         
-                                                                 
- dense_42 (relu)             (None, 150)               22650     
-                                                                 
- dropout_17 (Dropout)        (None, 150)               0         
-                                                                 
- dense_43 (relu)             (None, 100)               15100     
-                                                                 
- dense_44 (relu)             (None, 100)               10100     
-                                                                 
- dense_45 (sigmoid)          (None, 1)                 101       
+![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/5fc11d98-ee95-4872-beac-6b9ecc911387)
 
 All dropout layers had percentages of 10%.
 
