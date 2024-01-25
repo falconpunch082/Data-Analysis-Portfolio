@@ -96,3 +96,37 @@ All attempts at creating a model which reached the desired accuracy have failed.
 The first model iteration had an accuracy of 72.3% with loss of 0.57 upon testing with ground truth data, while the final iteration had an accuracy of 72.3% with loss of 0.58. Both models, and all models made between, failed to reach the desired accuracy of 75% or above.
 
 Future improvements could include more layers and/or neurons per layer, as usually the higher the number of layers/neurons, the better accuracy gets. This however increases the likelihood of overfitting, and is also computationally expensive. As for activation functions, considering the requirements of the model, relu and sigmoid functions remain the ideal activation functions to use, as the model is a binary classifier. More data could be provided to improve accuracy too.
+
+## Addentum - Automation Results
+
+Further work was done on the model by automating the process of finding the best hyperparameters through keras_tuner.
+
+keras_tuner was set to these limits on hyperparameters:
+- Activation functions only allowed in hidden layers are relu, tanh and sigmoid.
+- It was allowed to make 3-8 hidden layers. It always created an input and output layer.
+- The input layer could have 150-200 neurons.
+- The hidden layers could have 25-150 neurons.
+- The output layer is always a dense layer with one neuron and a sigmoid activation.
+- Epochs ranged from 1 to 100.
+
+The following is raw output of the best hyperparameters:
+
+> {'activation': 'sigmoid',
+>  'first_units': 200,
+> 'num_layers': 2,
+> 'units_0': 100,
+> 'units_1': 50,
+> 'units_2': 75,
+> 'units_3': 150,
+> 'units_4': 150,
+> 'units_5': 50,
+> 'tuner/epochs': 7,
+> 'tuner/initial_epoch': 0,
+>   ...}
+
+The following are the results:
+
+268/268 - 1s - loss: 0.5697 - accuracy: 0.7278 - 586ms/epoch - 2ms/step
+Loss: 0.5696994066238403, Accuracy: 0.7278134226799011
+
+The model created by keras_tuner was not able to create a model that satified the desired accuracy requirement. Therefore, other avenues of improving accuracy, like improving quality of provided data or increasing amount of input data, should be explored.
