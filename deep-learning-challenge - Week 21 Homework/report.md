@@ -37,13 +37,7 @@ In all iterations, the first layer had the argument input_dim=36 as there were 3
 
 The first iteration of the model had the following structure:
 
- Layer (activation)         Output Shape              Param #   
-=================================================================
- dense_3 (relu)             (None, 10)                370       
-                                                                 
- dense_4 (relu)             (None, 5)                 55        
-                                                                 
- dense_5 (sigmoid)          (None, 1)                 6         
+![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/0c6df789-4f8a-42db-a37e-effaa1186cbf)
 
 The following was the final result of training of the first iteration.
 
@@ -60,23 +54,7 @@ As this did not satisfy the desired accuracy of 75% or above, multiple iteration
 
 The ninth iteration of the model was the final iteration. It had the following structure.
 
- Layer (activation)          Output Shape              Param #   
-=================================================================
- dense_40 (relu)             (None, 200)               7400      
-                                                                 
- dense_41 (relu)             (None, 150)               30150     
-                                                                 
- dropout_16 (Dropout)        (None, 150)               0         
-                                                                 
- dense_42 (relu)             (None, 150)               22650     
-                                                                 
- dropout_17 (Dropout)        (None, 150)               0         
-                                                                 
- dense_43 (relu)             (None, 100)               15100     
-                                                                 
- dense_44 (relu)             (None, 100)               10100     
-                                                                 
- dense_45 (sigmoid)          (None, 1)                 101       
+![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/f4cb7a9f-e60f-4ddd-9d13-140c944f8f70)
 
 All dropout layers had percentages of 10%.
 
