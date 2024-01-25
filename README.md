@@ -87,6 +87,10 @@ Week 20 - Supervised Learning
 - Learned about the importance of splitting provided data into training and validation data.
 - Learned about metrics used to measure accuracy of a model (accuracy, precision, recall, confusion matrix).
 
+Week 21 - Deep Learning and Neural Networks
+- Introduced to the concept of neural networks and the perceptron.
+- Learned how to use TensorFlow and keras to create neural networks.
+
 ---
 
 Completion of bootcamp is equivalent to the following Monash University units:
