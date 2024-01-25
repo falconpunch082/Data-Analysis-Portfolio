@@ -37,7 +37,13 @@ In all iterations, the first layer had the argument input_dim=36 as there were 3
 
 The first iteration of the model had the following structure:
 
-![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/4b891145-dc29-4d05-a86f-82de1164c8dd)
+ Layer (activation)         Output Shape              Param #   
+=================================================================
+ dense_3 (relu)             (None, 10)                370       
+                                                                 
+ dense_4 (relu)             (None, 5)                 55        
+                                                                 
+ dense_5 (sigmoid)          (None, 1)                 6         
 
 The following was the final result of training of the first iteration.
 
@@ -52,9 +58,25 @@ As this did not satisfy the desired accuracy of 75% or above, multiple iteration
 - More layers and neurons were added to see if it could improve accuracy. Epochs were increased from 100 to 150 in another iteration.
 - Throughout the attempts, the 'relu' function (for hidden layers) and 'sigmoid' function (for the output layer) were the best in accuracy.
 
-The ninth iteration of the model was the final iteration. It had the following structure:
+The ninth iteration of the model was the final iteration. It had the following structure.
 
-![image](https://github.com/falconpunch082/Data-Analysis-Portfolio/assets/26648391/5fc11d98-ee95-4872-beac-6b9ecc911387)
+ Layer (activation)          Output Shape              Param #   
+=================================================================
+ dense_40 (relu)             (None, 200)               7400      
+                                                                 
+ dense_41 (relu)             (None, 150)               30150     
+                                                                 
+ dropout_16 (Dropout)        (None, 150)               0         
+                                                                 
+ dense_42 (relu)             (None, 150)               22650     
+                                                                 
+ dropout_17 (Dropout)        (None, 150)               0         
+                                                                 
+ dense_43 (relu)             (None, 100)               15100     
+                                                                 
+ dense_44 (relu)             (None, 100)               10100     
+                                                                 
+ dense_45 (sigmoid)          (None, 1)                 101       
 
 All dropout layers had percentages of 10%.
 
@@ -74,3 +96,37 @@ All attempts at creating a model which reached the desired accuracy have failed.
 The first model iteration had an accuracy of 72.3% with loss of 0.57 upon testing with ground truth data, while the final iteration had an accuracy of 72.3% with loss of 0.58. Both models, and all models made between, failed to reach the desired accuracy of 75% or above.
 
 Future improvements could include more layers and/or neurons per layer, as usually the higher the number of layers/neurons, the better accuracy gets. This however increases the likelihood of overfitting, and is also computationally expensive. As for activation functions, considering the requirements of the model, relu and sigmoid functions remain the ideal activation functions to use, as the model is a binary classifier. More data could be provided to improve accuracy too.
+
+## Addentum - Automation Results
+
+Further work was done on the model by automating the process of finding the best hyperparameters through keras_tuner.
+
+keras_tuner was set to these limits on hyperparameters:
+- Activation functions only allowed in hidden layers are relu, tanh and sigmoid.
+- It was allowed to make 3-8 hidden layers. It always created an input and output layer.
+- The input layer could have 150-200 neurons.
+- The hidden layers could have 25-150 neurons.
+- The output layer is always a dense layer with one neuron and a sigmoid activation.
+- Epochs ranged from 1 to 100.
+
+The following is raw output of the best hyperparameters:
+
+> {'activation': 'sigmoid',
+>  'first_units': 200,
+> 'num_layers': 2,
+> 'units_0': 100,
+> 'units_1': 50,
+> 'units_2': 75,
+> 'units_3': 150,
+> 'units_4': 150,
+> 'units_5': 50,
+> 'tuner/epochs': 7,
+> 'tuner/initial_epoch': 0,
+>   ...}
+
+The following are the results:
+
+268/268 - 1s - loss: 0.5697 - accuracy: 0.7278 - 586ms/epoch - 2ms/step
+Loss: 0.5696994066238403, Accuracy: 0.7278134226799011
+
+The model created by keras_tuner was not able to create a model that satified the desired accuracy requirement. Therefore, other avenues of improving accuracy, like improving quality of provided data or increasing amount of input data, should be explored.
