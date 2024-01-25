@@ -1,4 +1,4 @@
-# Module 12 Report 
+# Module 20 Report 
 
 ## Overview of the Analysis
 
@@ -43,7 +43,7 @@ From the results above, it can be determined that:
 - While the model wrongfully categorised a percent of healthy loan cases to be the contrary, everything it flagged as healthy loans were actually healthy loans (very high recall and precision).
 - The model, however, did wrongfully categorised nearly all of the high-risk loan cases as healthy loan cases. There was a 85% chance that the model correctly identified high-risk loan cases.
 
-Considering that only 3.2% of provided data are classified as high-risk loans, it is no wonder that the model can identify healthy loans with near-perfect accuracy but cannot identify high-risk loans adequately.
+Considering that only 3.2% of provided data are classified as high-risk loans, it is no wonder that the model can identify healthy loans with near-perfect accuracy but cannot identify high-risk loans adequately. It is due to the lack of high-risk loan cases that the model is not able to learn adequately the traits of a high-risk loan.
 
 
 ## Summary
