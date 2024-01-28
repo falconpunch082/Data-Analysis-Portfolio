@@ -91,6 +91,16 @@ Week 21 - Deep Learning and Neural Networks
 - Introduced to the concept of neural networks and the perceptron.
 - Learned how to use TensorFlow and keras to create neural networks.
 
+Week 22 - Big Data
+- Introduced to Apache Spark and PySpark to access big data.
+- Learned how to use SparkSQL and data caching for efficient data querying.
+- Learned about Parquet files and how to partition data.
+- Learned about DataBricks.
+
+Week 23 + 24 - Machine Learning Project (link TBA)
+
+END OF COURSE
+
 ---
 
 Completion of bootcamp is equivalent to the following Monash University units:
