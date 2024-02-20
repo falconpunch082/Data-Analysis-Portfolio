@@ -97,7 +97,7 @@ Week 22 - Big Data
 - Learned about Parquet files and how to partition data.
 - Learned about DataBricks.
 
-Week 23 + 24 - Machine Learning Project ((link)[https://github.com/falconpunch082/skin-cancer-detection])
+Week 23 + 24 - Machine Learning Project ([link](https://github.com/falconpunch082/skin-cancer-detection))
 - Learned about convolutional neural networks and its usage in computer vision.
 - Engaged in self-learning to learn image data preprocessing techniques.
 
